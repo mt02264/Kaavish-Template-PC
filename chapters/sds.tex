@@ -2,22 +2,23 @@ This chapter provides important artifacts related to design of our project.
 
 \section{Software Design}
 
-This is a class UML Diagram which contain classes of the main actors alongside their attributes and their behaviors. There are 11 classes each having their own specific attributes and functions clearly defining the flow and functionality of the system.\\ 
-\\
-\textbf{Classes:}\\
-\\
-1)  User\\
-2)  Jobs\\
-3)  Routes\\
-4)  BaseUser\\
-5)  Sessions\\
-6)  Admin\\
-7)  Location\\
-8)  Images\\
-9)  Pre-Processing  (Static Class)\\
-10) GarbNetModel    (Static Class)\\
-11) Quantification  (Static Class)\\
-\\
+This is a class UML Diagram which contain classes of the main actors alongside their attributes and their behaviors. There are 11 classes each having their own specific attributes and functions clearly defining the flow and functionality of the system.
+\subsection{Classes}
+\begin{enumerate}
+    \item  User
+    \item  Jobs
+    \item  Routes
+    \item  BaseUser
+    \item  Sessions
+    \item  Admin
+    \item  Location
+    \item  Images
+    \item  Pre-Processing  (Static Class)
+    \item GarbNetModel    (Static Class)
+    \item Quantification  (Static Class)
+
+\end{enumerate}
+
 
 \newpage
 \begin{figure}[!hb]
@@ -26,7 +27,7 @@ This is a class UML Diagram which contain classes of the main actors alongside t
    \caption{UML Diagram}\label{fig:picture}
 \end{figure}
 
-\textbf{UML Description:}\\
+\subsection{UML Description}
 Base User class refers to all the user classes that are accessing the system that is it includes both the User and the Admin but since they are separate entities (Actors) they will also have their own separate classes and will be inheriting from the parent class which in our case is the BaseUser. This particular class contains its particular attributes and functions that will remain the same for both the admin and the user entity. The relationship between the User class and the Admin class with the Base User is of generalization that is one element is a specialization of another general component. It may be substituted for it and is mostly used to represent inheritance. The Base User in this case is the Parent Class.\\
 \\Now, Session Class having its defined attributes and functions is related to the BaseUser Class by the relation of Composition.The relationship is as such that if a composite object is deleted, all other objects associated with it are deleted. The composite object in this case is of the class BaseUser.\\
 \\User Class having its own specific attributes and function is associated by aggregation relation with the Job Class that is a User can upload multiple Jobs. The relation is that of aggregation because the child class object can meaningfully, which in this case is Jobs, exist without the parent class object, unlike in composition.\\
@@ -39,10 +40,8 @@ Base User class refers to all the user classes that are accessing the system tha
 \newpage
 \section{Data Design}
 
-This section presents the structure of our database that caters to persistent data storage in our project. The structure is shown as a normalized data model for relational databases. \\
-\\
-\textbf{ERD}: \\
-\\
+This section presents the structure of our database that caters to persistent data storage in our project. The structure is shown as a normalized data model for relational databases.
+\subsection{ERD}
 The ERD is the high-level conceptual diagram explaining the working of our project. This diagram shows the entities and the relationship of the entities stored in a database. The diagram will help explain the logical structure of the database.\\
 \\The Entity Relationship Diagram for our database as follows:
 \begin{figure}[!hb]

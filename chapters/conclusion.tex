@@ -1,1 +1,24 @@
-TBA.
+\section{Conclusion}
+
+There are two major parts of our entire system. The first part is the SaaS (Software as a service) which enables two way communication between end users and administrations. The end user only needs to have the easy-to-use application on their mobile phones. The database itself is on cloud, which works on records in real time. \\
+\\
+The second part is that of our cloud model that is responsible for calculating a volume of an irregular shape after taking images as input. Once an end user via their mobile app uploads a job, our cloud model automatically fetches the data from the database and performs some operations on it. There are two major responsibilities that the model has. One is to perform some preprocessing and identify garbage and the second is to compute the volume.\\
+\\
+The identification is done via an already trained model called ‘SpotGarbage’, which used a Conventional Neural Network (CNN) on a garbage dataset and successfully learned to detect the patterns of garbage from an image.  \\
+Once identification part is done, then we move towards the processing of the volume of the garbage. This is done using an approach based on similar triangle ratios.  Once we get the volume, we also optimize the result by utilizing the volumes of known shapes and incorporating that in the volume of the irregular shape of our garbage.\\
+\\
+Finally, once the volume has been calculated, it is pushed back to the database, which can be seen on the admin panel. The admin panel is able to see all the jobs each user has posted as well as their location and volume (of garbage). The admin can plan a route accordingly to the positions of the garbage for truck drivers efficiently in this manner. Once a the garbage has been collected, an admin can mark its status as done which can also be seen on the users end when they look at the lists of job they uploaded.
+
+
+\section{Future Work}
+
+These are some of the future potentials of our system:
+\begin{enumerate}
+    \item The application of our project can be further enhanced if local administration or different NGOs implement this which working on the waste management sector.
+ 
+    \item The route generation can be further enhanced for individual truck drivers who will be responsible in collecting the garbage from the specific locations. 
+
+    \item Once our system gets enough data gathered of garbage dumps around the city, it can use this data to actually pin point how much garbage is calculated in which area which can effectively improve waste management
+
+    \item Our cloud model is the capability to calculate the volume of any irregular shape if that shape can be identified in a bounding box. This can be further applied in various scenarios like calculating volumes of containers, pile of clothes, pile of rocks etc.
+\end{enumerate}
